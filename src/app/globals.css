@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ref :: https://twitter.com/steventey/status/1677339375645126659 */
+:root {
+  --app-gray-0: 255 255 255;
+  --app-gray-50: 249 250 251;
+  --app-gray-100: 243 244 246;
+  --app-gray-200: 229 231 235;
+  --app-gray-300: 209 213 219;
+  --app-gray-400: 156 163 175;
+  --app-gray-500: 107 114 128;
+  --app-gray-600: 75 85 99;
+  --app-gray-700: 55 65 81;
+  --app-gray-800: 31 41 55;
+  --app-gray-900: 17 24 39;
+  --app-gray-950: 3 7 18;
+}
+
+.dark {
+  --app-gray-0: 3 7 18;
+  --app-gray-50: 17 24 39;
+  --app-gray-100: 31 41 55;
+  --app-gray-200: 55 65 81;
+  --app-gray-300: 75 85 99;
+  --app-gray-400: 107 114 128;
+  --app-gray-500: 156 163 175;
+  --app-gray-600: 209 213 219;
+  --app-gray-700: 229 231 235;
+  --app-gray-800: 243 244 246;
+  --app-gray-900: 249 250 251;
+  --app-gray-950: 255 255 255;
+}
