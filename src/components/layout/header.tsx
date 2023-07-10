@@ -1,7 +1,7 @@
 'use client';
 
-import { useTheme } from 'next-themes';
 import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 import { mergeClasses } from '@/lib/utils';
 import useScroll from '@/hooks/use-scroll';
@@ -25,7 +25,7 @@ const Logo = () => (
 
 const Header = () => {
   const scrolled = useScroll(40);
-  const { theme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header
@@ -54,42 +54,40 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex md:hidden">
-            <Drawer>
-              <DrawerTrigger>
-                <IconButton>
-                  <Menu />
-                </IconButton>
-              </DrawerTrigger>
-              <DrawerContent>
-                <div className="flex items-center justify-between border-b border-gray-100 p-4">
-                  <Logo />
-                  <DrawerClose>
-                    <IconButton>
-                      <X />
-                    </IconButton>
-                    <span className="sr-only">Close</span>
-                  </DrawerClose>
+          <Drawer open={isOpen} onOpenChange={setIsOpen}>
+            <DrawerTrigger asChild className="flex md:hidden">
+              <IconButton>
+                <Menu />
+              </IconButton>
+            </DrawerTrigger>
+            <DrawerContent>
+              <div className="flex items-center justify-between border-b border-gray-100 p-4">
+                <Logo />
+                <DrawerClose>
+                  <IconButton>
+                    <X />
+                  </IconButton>
+                  <span className="sr-only">Close</span>
+                </DrawerClose>
+              </div>
+              <div className="border-b border-gray-100 p-4">
+                <ul className="flex list-none flex-col gap-4">
+                  {NAV_LINKS.map((link, index) => (
+                    <li key={index}>
+                      <Link href={link.href}>{link.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col gap-4 p-4">
+                <div className="flex items-center justify-between">
+                  <p>Switch Theme</p>
+                  <ThemeSwitcher />
                 </div>
-                <div className="border-b border-gray-100 p-4">
-                  <ul className="flex list-none flex-col gap-4">
-                    {NAV_LINKS.map((link, index) => (
-                      <li key={index}>
-                        <Link href={link.href}>{link.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex flex-col gap-4 p-4">
-                  <div className="flex items-center justify-between">
-                    <p>Switch Theme</p>
-                    <ThemeSwitcher />
-                  </div>
-                  <Button>Download CV</Button>
-                </div>
-              </DrawerContent>
-            </Drawer>
-          </div>
+                <Button>Download CV</Button>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </header>
