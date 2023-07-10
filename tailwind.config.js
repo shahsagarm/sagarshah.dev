@@ -24,6 +24,24 @@ module.exports = {
           950: 'rgb(var(--app-gray-950) / <alpha-value>)',
         },
       },
+      keyframes: {
+        open: {
+          '0%': {
+            opacity: 1,
+            transform: 'translateX(100%)',
+          },
+        },
+        close: {
+          to: {
+            opacity: 0,
+            transform: 'translateX(100%)',
+          },
+        },
+      },
+      animation: {
+        'drawer-open': 'open 0.3s ease-in-out',
+        'drawer-close': 'close 0.3s ease-in-out',
+      },
     },
   },
   plugins: [],
