@@ -1,7 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
 
 import { mergeClasses } from '@/lib/utils';
 import useScroll from '@/hooks/use-scroll';
@@ -16,6 +16,7 @@ import {
   DrawerClose,
 } from '@/components/navigation/drawer';
 import { NAV_LINKS } from '@/lib/data';
+import { useWindowSize } from '@/hooks/use-window-size';
 
 const Logo = () => (
   <div className="flex items-center justify-center rounded-xl bg-gray-950 p-2">
@@ -26,6 +27,13 @@ const Logo = () => (
 const Header = () => {
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size?.width && size?.width > 767 && isOpen) {
+      setIsOpen(false);
+    }
+  }, [size, isOpen]);
 
   return (
     <header
@@ -63,11 +71,10 @@ const Header = () => {
             <DrawerContent>
               <div className="flex items-center justify-between border-b border-gray-100 p-4">
                 <Logo />
-                <DrawerClose>
+                <DrawerClose asChild>
                   <IconButton>
                     <X />
                   </IconButton>
-                  <span className="sr-only">Close</span>
                 </DrawerClose>
               </div>
               <div className="border-b border-gray-100 p-4">
