@@ -10,10 +10,10 @@ const buttonVariants = cva('items-center justify-center rounded-xl', {
   variants: {
     variant: {
       contained:
-        'bg-gray-900 hover:bg-gray-700 active:bg-gray-800 font-semibold text-gray-50 transition-colors duration-200',
+        'bg-gray-900 hover:bg-gray-700 active:bg-gray-800 font-medium text-gray-50 transition-colors duration-200',
     },
     size: {
-      md: 'px-4 py-2',
+      md: 'px-4 py-1.5',
     },
     fullWidth: {
       true: 'flex w-full',

@@ -19,9 +19,9 @@ import { NAV_LINKS } from '@/lib/data';
 import { useWindowSize } from '@/hooks/use-window-size';
 
 const Logo = () => (
-  <div className="flex items-center justify-center rounded-xl bg-gray-950 p-2">
-    <p className="text-2xl font-semibold leading-none text-gray-50">SS</p>
-  </div>
+  <p className="text-2xl font-bold leading-none text-gray-900 md:text-3xl">
+    {'<SS />'}
+  </p>
 );
 
 const Header = () => {
@@ -38,12 +38,12 @@ const Header = () => {
   return (
     <header
       className={mergeClasses(
-        'sticky top-0 z-30 flex h-[72px] w-full items-center justify-center border-b border-transparent bg-gray-0 transition-all ease-in',
-        scrolled ? 'border-gray-100 bg-gray-0/50 backdrop-blur-xl' : ''
+        'sticky top-0 z-30 flex h-[72px] w-full items-center justify-center border-b border-transparent bg-gray-0 transition-all ease-in max-md:border-gray-100',
+        scrolled ? 'bg-gray-0/50 backdrop-blur-xl md:border-gray-100' : ''
       )}
     >
       <div className="mx-auto w-full max-w-7xl">
-        <div className="flex items-center justify-between px-4">
+        <div className="flex items-center justify-between px-4 md:px-8">
           <Link href="/" noCustomization>
             <Logo />
           </Link>
