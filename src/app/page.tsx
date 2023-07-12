@@ -7,6 +7,8 @@ import Typography from '@/components/general/typography';
 import IconButton from '@/components/general/icon-button';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
+import { TECHNOLOGIES } from '@/lib/data';
+import TechItem from '@/components/data-display/tech-item';
 
 export default function Home() {
   return (
@@ -86,14 +88,14 @@ export default function Home() {
         <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
           {/* Image */}
           <div className="flex justify-center md:order-first md:justify-end">
-            <div className="relative h-[340px] w-[280px] md:h-[520px] md:w-[440px]">
+            <div className="relative h-[380px] w-[320px] md:h-[520px] md:w-[440px]">
               <Image
                 src={SagarFullPose}
                 alt="Fullpose of Sagar"
-                className="absolute z-10 h-[320px] w-[240px] border-8 border-gray-50 max-md:left-5 md:right-0 md:top-0 md:h-[480px] md:w-[400px]"
+                className="absolute z-10 h-[360px] w-[280px] border-8 border-gray-50 max-md:left-5 md:right-0 md:top-0 md:h-[480px] md:w-[400px]"
                 style={{ objectFit: 'cover' }}
               ></Image>
-              <div className="absolute h-[320px] w-[280px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:left-0 md:h-[480px] md:w-[400px]"></div>
+              <div className="absolute h-[360px] w-[320px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:left-0 md:h-[480px] md:w-[400px]"></div>
             </div>
           </div>
 
@@ -130,7 +132,7 @@ export default function Home() {
               public, or you can follow me on GitHub.
             </Typography>
             <Typography>Finally, some quick bits about me.</Typography>
-            <div className="flex gap-6">
+            <div className="flex flex-col gap-2 md:flex-row md:gap-6">
               <ul className="flex list-inside list-disc flex-col gap-2">
                 <li>B.E. in Computer Engineering</li>
                 <li>Full time freelancer</li>
@@ -145,6 +147,22 @@ export default function Home() {
               free to reach out and say hello! I promise I don&apos;t bite 😉
             </Typography>
           </div>
+        </div>
+      </Container>
+
+      {/* Skills Section */}
+      <Container>
+        <div className="flex flex-col gap-4 self-center">
+          <Tag label="Skills" className="self-center" />
+          <Typography variant="subtitle">
+            The skills, tools and technologies I am really good at:
+          </Typography>
+        </div>
+
+        <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
+          {TECHNOLOGIES.map((technology, index) => (
+            <TechItem technology={technology} key={index} />
+          ))}
         </div>
       </Container>
     </>
