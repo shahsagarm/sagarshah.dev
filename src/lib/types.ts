@@ -1,4 +1,4 @@
-export type TechItem = {
+export type TechDetails = {
   label: string;
   logo: string;
   darkModeLogo?: string;

@@ -8,7 +8,7 @@ import IconButton from '@/components/general/icon-button';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import { TECHNOLOGIES } from '@/lib/data';
-import TechItem from '@/components/data-display/tech-item';
+import TechDetails from '@/components/data-display/tech-details';
 
 export default function Home() {
   return (
@@ -161,7 +161,7 @@ export default function Home() {
 
         <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
           {TECHNOLOGIES.map((technology, index) => (
-            <TechItem technology={technology} key={index} />
+            <TechDetails technology={technology} key={index} />
           ))}
         </div>
       </Container>
