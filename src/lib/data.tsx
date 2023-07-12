@@ -17,7 +17,7 @@ import LogoCypress from '/public/images/logos/icon-cypress.svg';
 import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
 import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
-import { TechItem } from './types';
+import { TechDetails } from './types';
 
 export const NAV_LINKS = [
   {
@@ -38,7 +38,7 @@ export const NAV_LINKS = [
   },
 ];
 
-export const TECHNOLOGIES: TechItem[] = [
+export const TECHNOLOGIES: TechDetails[] = [
   {
     label: 'Javascript',
     logo: LogoJavascript,
