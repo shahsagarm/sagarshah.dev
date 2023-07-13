@@ -19,12 +19,18 @@ import LogoCypress from '/public/images/logos/icon-cypress.svg';
 import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
 import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
+
 import LogoUpwork from '/public/images/logos/logo-upwork.svg';
 import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
 import LogoGreenApexLight from '/public/images/logos/logo-greenapex-light.svg';
 import LogoDotnpixel from '/public/images/logos/logo-dotnpixel.svg';
 import LogoDotnpixelLight from '/public/images/logos/logo-dotnpixel-light.svg';
-import { ExperienceDetails, TechDetails } from '@/lib/types';
+
+import ProjectFiskil from '/public/images/project-fiskil.png';
+import ProjectWingie from '/public/images/project-wingie.png';
+import ProjectPepehousing from '/public/images/project-pepehousing.png';
+
+import { ExperienceDetails, ProjectDetails, TechDetails } from '@/lib/types';
 
 export const NAV_LINKS = [
   {
@@ -182,6 +188,64 @@ export const EXPERIENCES: ExperienceDetails[] = [
     endDate: new Date(2017, 4),
     summary: [
       'Worked as a full stack developer (MERN Stack / MEAN Stack / Ionic / Laravel).',
+    ],
+  },
+];
+
+export const PROJECTS: ProjectDetails[] = [
+  {
+    name: 'Wingie',
+    description:
+      'A platform to compare and find cheap flights and save on flight tickets. Book and buy tickets online securely and easily. Instantly compare flights from over 300 airlines to book the best deal quickly and securely in a few simple steps.',
+    url: 'https://www.wingie.com',
+    previewImage: ProjectWingie,
+    technologies: [
+      'React',
+      'Typescript',
+      'React Boostrap',
+      'Firebase',
+      'Express.js',
+      'PostgreSQL',
+      'Styled Components',
+      'Redux',
+    ],
+  },
+  {
+    name: 'Fiskil',
+    description:
+      'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
+    url: 'https://fiskil.com.au',
+    previewImage: ProjectFiskil,
+    technologies: [
+      'React',
+      'Next.js',
+      'Typescript',
+      'Tailwindcss',
+      'Material UI',
+      'Redux Toolkit',
+      'React Query',
+      'Express.js',
+      'PostgreSQL',
+      'Firebase',
+      'AWS Amplify',
+      'Cypress',
+      'Storybook',
+    ],
+  },
+  {
+    name: 'Pepehousing',
+    description:
+      'A platform to rent a flat or room in Poland in an easy and secure way. Browse hundreds of verified offers, contact the owner and pay online.',
+    url: 'https://pepehousing.com',
+    previewImage: ProjectPepehousing,
+    technologies: [
+      'React',
+      'Next.js',
+      'Typescript',
+      'Tailwindcss',
+      'Redux Toolkit',
+      'React Query',
+      'Storybook',
     ],
   },
 ];

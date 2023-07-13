@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { MapPinIcon } from 'lucide-react';
 
-import { EXPERIENCES, TECHNOLOGIES } from '@/lib/data';
+import { EXPERIENCES, PROJECTS, TECHNOLOGIES } from '@/lib/data';
 import SagarHeadshot from '/public/images/sagar-headshot.jpg';
 import SagarFullPose from '/public/images/sagar-full-pose.jpg';
 import Typography from '@/components/general/typography';
@@ -11,6 +11,7 @@ import TechDetails from '@/components/data-display/tech-details';
 import Card from '@/components/layout/card';
 import ExperienceDetails from '@/components/data-display/experience-details';
 import SocialIcons from '@/components/data-display/social-icons';
+import ProjectDetails from '@/components/data-display/project-details';
 
 export default function Home() {
   return (
@@ -167,12 +168,25 @@ export default function Home() {
         </div>
 
         {EXPERIENCES?.map((experience, index) => (
-          <Card
+          <ExperienceDetails {...experience} key={index} />
+        ))}
+      </Container>
+
+      {/* Work Section */}
+      <Container id="work">
+        <div className="flex flex-col gap-4 self-center">
+          <Tag label="Work" className="self-center" />
+          <Typography variant="subtitle">
+            Some of the noteworthy projects I have built:
+          </Typography>
+        </div>
+
+        {PROJECTS?.map((project, index) => (
+          <ProjectDetails
             key={index}
-            className="h mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8"
-          >
-            <ExperienceDetails {...experience} />
-          </Card>
+            {...project}
+            layoutType={index % 2 === 0 ? 'default' : 'reverse'}
+          />
         ))}
       </Container>
     </>

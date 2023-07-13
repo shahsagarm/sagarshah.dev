@@ -1,6 +1,7 @@
 import Typography from '@/components/general/typography';
 import ImageWrapper from '@/components/data-display/image-wrapper';
-import { ExperienceDetails } from '@/lib/types';
+import { ExperienceDetails as ExperienceDetailsProps } from '@/lib/types';
+import Card from '@/components/layout/card';
 
 const dateFormatOptions: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -16,10 +17,10 @@ const ExperienceDetails = ({
   startDate,
   endDate,
   summary,
-}: ExperienceDetails) => {
+}: ExperienceDetailsProps) => {
   return (
-    <>
-      <div className="max-md:order-1">
+    <Card className="h mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8">
+      <div className="max-md:order-1 md:w-1/4">
         <ImageWrapper
           src={logo}
           srcForDarkMode={darkModeLogo}
@@ -27,7 +28,7 @@ const ExperienceDetails = ({
           className="max-w-[120px]"
         />
       </div>
-      <div className="flex max-w-sm flex-col gap-4 max-md:order-3">
+      <div className="flex flex-col gap-4 max-md:order-3 md:w-2/4">
         <Typography variant="subtitle" className="font-semibold text-gray-900">
           {position}
         </Typography>
@@ -37,8 +38,8 @@ const ExperienceDetails = ({
           ))}
         </ul>
       </div>
-      <div className="max-md:order-2">
-        <Typography className="text-gray-700">
+      <div className="max-md:order-2 md:w-1/4">
+        <Typography className="text-gray-700 md:text-right">
           {new Intl.DateTimeFormat('en-US', dateFormatOptions).format(
             startDate
           )}{' '}
@@ -52,7 +53,7 @@ const ExperienceDetails = ({
             : 'NA'}
         </Typography>
       </div>
-    </>
+    </Card>
   );
 };
 
