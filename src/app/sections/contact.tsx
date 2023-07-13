@@ -82,7 +82,7 @@ const ContactSection = () => {
             </IconButton>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-2">
           <Typography>You may also find me on these platforms!</Typography>
           <SocialIcons />
         </div>
