@@ -17,7 +17,12 @@ import LogoCypress from '/public/images/logos/icon-cypress.svg';
 import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
 import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
-import { TechDetails } from './types';
+import LogoUpwork from '/public/images/logos/logo-upwork.svg';
+import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
+import LogoGreenApexLight from '/public/images/logos/logo-greenapex-light.svg';
+import LogoDotnpixel from '/public/images/logos/logo-dotnpixel.svg';
+import LogoDotnpixelLight from '/public/images/logos/logo-dotnpixel-light.svg';
+import { ExperienceDetails, TechDetails } from '@/lib/types';
 
 export const NAV_LINKS = [
   {
@@ -121,5 +126,45 @@ export const TECHNOLOGIES: TechDetails[] = [
     label: 'Git',
     logo: LogoGit,
     url: 'https://git-scm.com/',
+  },
+];
+
+export const EXPERIENCES: ExperienceDetails[] = [
+  {
+    logo: LogoUpwork,
+    logoAlt: 'Upwork logo',
+    position: 'Independent Freelancer',
+    startDate: new Date(2021, 10),
+    currentlyWorkHere: true,
+    summary: [
+      'Worked for various clients like Fiskil, Shosho, Crowe MacKay LLP.',
+      'Worked with a variety of technologies, including React, Next.js, Typescript, Express.js, PostgreSQL, Tailwindcss, Mui, Firebase, Storybook, Cypress, and others.',
+    ],
+  },
+  {
+    logo: LogoGreenApex,
+    darkModeLogo: LogoGreenApexLight,
+    logoAlt: 'Greenapex logo',
+    position: 'Team Lead',
+    startDate: new Date(2017, 6),
+    endDate: new Date(2021, 9),
+    summary: [
+      'Acted as team lead in different projects.',
+      'Brainstormed new ideas & gathered requirements for internal projects.',
+      'Designed architecture of different projects (frontend + backend).',
+      'Worked on enterprise-level projects for a variety of clients.',
+      'Handled sprint planning & task distribution.',
+    ],
+  },
+  {
+    logo: LogoDotnpixel,
+    darkModeLogo: LogoDotnpixelLight,
+    logoAlt: 'Dotnpixel logo',
+    position: 'Full Stack Developer',
+    startDate: new Date(2017, 6),
+    endDate: new Date(2021, 9),
+    summary: [
+      'Worked as a full stack web developer (MERN Stack / MEAN Stack / Ionic / Laravel) at dotnpixel.',
+    ],
   },
 ];

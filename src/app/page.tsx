@@ -1,20 +1,22 @@
 import Image from 'next/image';
 import { MapPinIcon, Github, Twitter, Figma, Mail } from 'lucide-react';
 
+import { EXPERIENCES, TECHNOLOGIES } from '@/lib/data';
 import SagarHeadshot from '/public/images/sagar-headshot.jpg';
 import SagarFullPose from '/public/images/sagar-full-pose.png';
 import Typography from '@/components/general/typography';
 import IconButton from '@/components/general/icon-button';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
-import { TECHNOLOGIES } from '@/lib/data';
 import TechDetails from '@/components/data-display/tech-details';
+import Card from '@/components/layout/card';
+import ExperienceDetails from '@/components/data-display/experience-details';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Container>
+      <Container id="hero">
         <div className="flex flex-col gap-12 md:flex-row">
           {/* Image */}
           <div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
@@ -80,7 +82,7 @@ export default function Home() {
       </Container>
 
       {/* About Me Section */}
-      <Container className="bg-gray-50">
+      <Container className="bg-gray-50" id="about">
         <div className="self-center">
           <Tag label="About me" />
         </div>
@@ -161,9 +163,28 @@ export default function Home() {
 
         <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-8 lg:gap-y-12">
           {TECHNOLOGIES.map((technology, index) => (
-            <TechDetails technology={technology} key={index} />
+            <TechDetails {...technology} key={index} />
           ))}
         </div>
+      </Container>
+
+      {/* Experience Section */}
+      <Container className="bg-gray-50">
+        <div className="flex flex-col gap-4 self-center">
+          <Tag label="Experience" className="self-center" />
+          <Typography variant="subtitle">
+            Here is a quick summary of my most recent experiences:
+          </Typography>
+        </div>
+
+        {EXPERIENCES?.map((experience, index) => (
+          <Card
+            key={index}
+            className="h mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8"
+          >
+            <ExperienceDetails {...experience} />
+          </Card>
+        ))}
       </Container>
     </>
   );

@@ -1,0 +1,18 @@
+import { mergeClasses } from '@/lib/utils';
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const Card = ({ className, children, ...props }: CardProps) => {
+  return (
+    <div
+      className={mergeClasses(
+        'rounded-xl bg-gray-0 shadow-md dark:bg-gray-100 dark:shadow-2xl',
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default Card;
