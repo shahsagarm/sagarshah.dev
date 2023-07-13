@@ -24,17 +24,39 @@ export interface IconButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof iconButtonVariants> {
   asChild?: boolean;
+  showTooltip?: boolean;
+  tooltipText?: string;
 }
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ className, size, asChild = false, children, ...props }, ref) => {
+  (
+    {
+      className,
+      size,
+      asChild = false,
+      showTooltip = false,
+      tooltipText = '',
+      children,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <button
-        className={mergeClasses(iconButtonVariants({ size }), className)}
+        className={mergeClasses(
+          'relative',
+          iconButtonVariants({ size }),
+          className
+        )}
         ref={ref}
         {...props}
       >
         {children}
+        {showTooltip && tooltipText.length > 0 && (
+          <span className="absolute -top-8 rounded-lg bg-gray-200 px-2 py-1 text-sm">
+            {tooltipText}
+          </span>
+        )}
       </button>
     );
   }
