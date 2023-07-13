@@ -178,10 +178,10 @@ export const EXPERIENCES: ExperienceDetails[] = [
     darkModeLogo: LogoDotnpixelLight,
     logoAlt: 'Dotnpixel logo',
     position: 'Full Stack Developer',
-    startDate: new Date(2017, 6),
-    endDate: new Date(2021, 9),
+    startDate: new Date(2015, 11),
+    endDate: new Date(2017, 4),
     summary: [
-      'Worked as a full stack web developer (MERN Stack / MEAN Stack / Ionic / Laravel).',
+      'Worked as a full stack developer (MERN Stack / MEAN Stack / Ionic / Laravel).',
     ],
   },
 ];
