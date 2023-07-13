@@ -1,16 +1,16 @@
 import Image from 'next/image';
-import { MapPinIcon, Github, Twitter, Figma, Mail } from 'lucide-react';
+import { MapPinIcon } from 'lucide-react';
 
 import { EXPERIENCES, TECHNOLOGIES } from '@/lib/data';
 import SagarHeadshot from '/public/images/sagar-headshot.jpg';
 import SagarFullPose from '/public/images/sagar-full-pose.png';
 import Typography from '@/components/general/typography';
-import IconButton from '@/components/general/icon-button';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import TechDetails from '@/components/data-display/tech-details';
 import Card from '@/components/layout/card';
 import ExperienceDetails from '@/components/data-display/experience-details';
+import SocialIcons from '@/components/data-display/social-icons';
 
 export default function Home() {
   return (
@@ -64,18 +64,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex gap-1">
-              <IconButton>
-                <Github />
-              </IconButton>
-              <IconButton>
-                <Twitter />
-              </IconButton>
-              <IconButton>
-                <Figma />
-              </IconButton>
-              <IconButton>
-                <Mail />
-              </IconButton>
+              <SocialIcons />
             </div>
           </div>
         </div>
