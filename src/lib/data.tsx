@@ -181,7 +181,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     startDate: new Date(2017, 6),
     endDate: new Date(2021, 9),
     summary: [
-      'Worked as a full stack web developer (MERN Stack / MEAN Stack / Ionic / Laravel) at dotnpixel.',
+      'Worked as a full stack web developer (MERN Stack / MEAN Stack / Ionic / Laravel).',
     ],
   },
 ];

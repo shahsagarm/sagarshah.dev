@@ -9,6 +9,7 @@ const Card = ({ className, children, ...props }: CardProps) => {
         'rounded-xl bg-gray-0 shadow-md dark:bg-gray-100 dark:shadow-2xl',
         className
       )}
+      {...props}
     >
       {children}
     </div>

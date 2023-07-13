@@ -3,7 +3,7 @@ import { MapPinIcon } from 'lucide-react';
 
 import { EXPERIENCES, TECHNOLOGIES } from '@/lib/data';
 import SagarHeadshot from '/public/images/sagar-headshot.jpg';
-import SagarFullPose from '/public/images/sagar-full-pose.png';
+import SagarFullPose from '/public/images/sagar-full-pose.jpg';
 import Typography from '@/components/general/typography';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';

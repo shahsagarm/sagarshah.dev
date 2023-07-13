@@ -5,7 +5,7 @@ type Size = {
   height: number | null;
 };
 
-export function useWindowSize() {
+export default function useWindowSize() {
   const [size, setSize] = useState<Size>({
     width: null,
     height: null,

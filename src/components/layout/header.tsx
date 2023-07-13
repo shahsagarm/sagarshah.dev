@@ -3,12 +3,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-import { mergeClasses } from '@/lib/utils';
-import useScroll from '@/hooks/use-scroll';
-import Link from '@/components/navigation/link';
-import Button from '@/components/general/button';
-import ThemeSwitcher from '@/components/general/theme-switcher';
-import IconButton from '@/components/general/icon-button';
 import {
   Drawer,
   DrawerTrigger,
@@ -16,7 +10,13 @@ import {
   DrawerClose,
 } from '@/components/navigation/drawer';
 import { NAV_LINKS } from '@/lib/data';
-import { useWindowSize } from '@/hooks/use-window-size';
+import { mergeClasses } from '@/lib/utils';
+import useWindowSize from '@/hooks/use-window-size';
+import useScroll from '@/hooks/use-scroll';
+import Link from '@/components/navigation/link';
+import Button from '@/components/general/button';
+import ThemeSwitcher from '@/components/general/theme-switcher';
+import IconButton from '@/components/general/icon-button';
 
 const Logo = () => (
   <p className="text-2xl font-bold leading-none text-gray-900 md:text-3xl">
@@ -29,6 +29,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const size = useWindowSize();
 
+  // close sidebar if open in screen size < 768px
   useEffect(() => {
     if (size?.width && size?.width > 767 && isOpen) {
       setIsOpen(false);
