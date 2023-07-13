@@ -6,7 +6,7 @@ import { mergeClasses } from '@/lib/utils';
 import Typography from '@/components/general/typography';
 import Link from '@/components/navigation/link';
 import Tag from '@/components/data-display/tag';
-import Card from '../layout/card';
+import Card from '@/components/layout/card';
 
 type ProjectDetailsProps = ProjectDetailsType & {
   layoutType: 'default' | 'reverse';
@@ -21,7 +21,7 @@ const ProjectDetails = ({
   layoutType = 'default',
 }: ProjectDetailsProps) => {
   return (
-    <Card className="h mx-auto flex w-full max-w-6xl flex-col md:flex-row">
+    <Card className="mx-auto flex w-full max-w-6xl flex-col md:flex-row">
       {/* Image */}
       <div
         className={mergeClasses(

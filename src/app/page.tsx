@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { MapPinIcon } from 'lucide-react';
 
-import { EXPERIENCES, PROJECTS, TECHNOLOGIES } from '@/lib/data';
+import { EXPERIENCES, PROJECTS, TECHNOLOGIES, TESTIMONIALS } from '@/lib/data';
 import SagarHeadshot from '/public/images/sagar-headshot.jpg';
 import SagarFullPose from '/public/images/sagar-full-pose.jpg';
 import Typography from '@/components/general/typography';
@@ -12,6 +12,7 @@ import Card from '@/components/layout/card';
 import ExperienceDetails from '@/components/data-display/experience-details';
 import SocialIcons from '@/components/data-display/social-icons';
 import ProjectDetails from '@/components/data-display/project-details';
+import TestimonialDetails from '@/components/data-display/testimonial-details';
 
 export default function Home() {
   return (
@@ -188,6 +189,22 @@ export default function Home() {
             layoutType={index % 2 === 0 ? 'default' : 'reverse'}
           />
         ))}
+      </Container>
+
+      {/* Testimonials Section */}
+      <Container id="testimonials" className="bg-gray-50">
+        <div className="flex flex-col gap-4 self-center">
+          <Tag label="Testimonials" className="self-center" />
+          <Typography variant="subtitle">
+            Nice things people have said about me:
+          </Typography>
+        </div>
+
+        <div className="flex gap-12 max-md:flex-col md:max-lg:flex-wrap">
+          {TESTIMONIALS?.map((testimonial, index) => (
+            <TestimonialDetails key={index} {...testimonial} />
+          ))}
+        </div>
       </Container>
     </>
   );
