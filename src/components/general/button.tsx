@@ -2,47 +2,20 @@
 
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
 
 import { mergeClasses } from '@/lib/utils';
 
-const buttonVariants = cva('items-center justify-center rounded-xl', {
-  variants: {
-    variant: {
-      contained:
-        'bg-gray-900 hover:bg-gray-700 active:bg-gray-800 font-medium text-gray-50 transition-colors duration-200',
-    },
-    size: {
-      md: 'px-4 py-1.5',
-    },
-    fullWidth: {
-      true: 'flex w-full',
-      false: 'inline-flex',
-    },
-  },
-  defaultVariants: {
-    variant: 'contained',
-    size: 'md',
-    fullWidth: false,
-  },
-});
-
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { className, variant, size, asChild = false, fullWidth = false, ...props },
-    ref
-  ) => {
+  ({ className, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
         className={mergeClasses(
-          buttonVariants({ variant, size, fullWidth }),
+          'inline-flex items-center justify-center rounded-xl bg-gray-900 px-4 py-1.5 font-medium text-gray-50 transition-colors duration-200 hover:bg-gray-700 active:bg-gray-800',
           className
         )}
         ref={ref}
@@ -51,6 +24,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
 Button.displayName = 'Button';
 
 export default Button;

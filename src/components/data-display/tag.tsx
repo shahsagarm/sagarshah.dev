@@ -6,6 +6,7 @@ import Typography from '@/components/general/typography';
 interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
   label?: string;
 }
+
 const Tag = React.forwardRef<HTMLDivElement, TagProps>(
   ({ label, className, ...props }: TagProps, ref) => {
     return (
@@ -23,5 +24,7 @@ const Tag = React.forwardRef<HTMLDivElement, TagProps>(
     );
   }
 );
+
 Tag.displayName = 'Tag';
+
 export default Tag;

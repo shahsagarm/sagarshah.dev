@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import * as DrawerPrimitive from '@radix-ui/react-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';

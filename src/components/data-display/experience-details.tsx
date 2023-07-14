@@ -1,7 +1,7 @@
 import Typography from '@/components/general/typography';
 import ImageWrapper from '@/components/data-display/image-wrapper';
-import { ExperienceDetails as ExperienceDetailsProps } from '@/lib/types';
 import Card from '@/components/layout/card';
+import { ExperienceDetails as ExperienceDetailsProps } from '@/lib/types';
 
 const dateFormatOptions: Intl.DateTimeFormatOptions = {
   year: 'numeric',

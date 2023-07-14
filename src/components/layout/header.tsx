@@ -17,6 +17,7 @@ import Link from '@/components/navigation/link';
 import ThemeSwitcher from '@/components/general/theme-switcher';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
+import Typography from '@/components/general/typography';
 
 const Logo = () => (
   <p className="text-2xl font-bold leading-none text-gray-900 md:text-3xl">
@@ -88,7 +89,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col gap-4 p-4">
               <div className="flex items-center justify-between">
-                <p>Switch Theme</p>
+                <Typography>Switch Theme</Typography>
                 <ThemeSwitcher />
               </div>
               <DownloadCV />
