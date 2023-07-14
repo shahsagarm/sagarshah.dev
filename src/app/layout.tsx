@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
+import { Metadata } from 'next';
 
 import './globals.css';
 import Header from '@/components/layout/header';
@@ -8,8 +9,45 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Sagar Shah | Full Stack Developer From Ahmedabad, India',
+const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
+const description =
+  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
+const url = 'https://sagarshah.dev';
+const ogImageUrl = `${url}/images/open-graph-sagar.png`;
+
+export const metadata: Metadata = {
+  title,
+  description,
+  keywords: [
+    'Frontend Developer',
+    'Full Stack Developer',
+    'React Developer',
+    'Next.js Developer',
+  ],
+  creator: 'Sagar Shah',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  openGraph: {
+    type: 'website',
+    url,
+    title,
+    description,
+    siteName: title,
+    images: [
+      {
+        url: ogImageUrl,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    creator: '@shahsagarm',
+    images: ogImageUrl,
+  },
 };
 
 export default function RootLayout({
