@@ -16,6 +16,7 @@ const url = 'https://sagarshah.dev';
 const ogImageUrl = `${url}/images/open-graph-sagar.png`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(url),
   title,
   description,
   keywords: [
