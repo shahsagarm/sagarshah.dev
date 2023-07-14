@@ -18,8 +18,13 @@ const ThemeSwitcher = () => {
     setMounted(true);
   }, []);
 
+  // until the UI is mounted, display a dummy icon
   if (!mounted) {
-    return null;
+    return (
+      <IconButton>
+        <Sun />
+      </IconButton>
+    );
   }
 
   return (
