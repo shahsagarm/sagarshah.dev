@@ -43,8 +43,10 @@ const ContactSection = () => {
 
   return (
     <Container id="contact">
-      <div className="flex flex-col gap-4 self-center">
-        <Tag label="Get in touch" className="self-center" />
+      <div className="flex flex-col items-center gap-4">
+        <div className="self-center">
+          <Tag label="Get in touch" />
+        </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
           What’s next? Feel free to reach out to me if you are looking for a
           developer, have a query, or simply want to connect.

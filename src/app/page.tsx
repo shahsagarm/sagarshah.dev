@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* About Me Section */}
       <Container className="bg-gray-50" id="about">
-        <div className="flex justify-center">
+        <div className="self-center">
           <Tag label="About me" />
         </div>
 
@@ -144,7 +144,9 @@ export default function Home() {
       {/* Skills Section */}
       <Container>
         <div className="flex flex-col items-center gap-4">
-          <Tag label="Skills" />
+          <div className="self-center">
+            <Tag label="Skills" />
+          </div>
           <Typography variant="subtitle" className="max-w-xl text-center">
             The skills, tools and technologies I am really good at:
           </Typography>
@@ -160,7 +162,9 @@ export default function Home() {
       {/* Experience Section */}
       <Container className="bg-gray-50">
         <div className="flex flex-col items-center gap-4">
-          <Tag label="Experience" />
+          <div className="self-center">
+            <Tag label="Experience" />
+          </div>
           <Typography variant="subtitle" className="max-w-xl text-center">
             Here is a quick summary of my most recent experiences:
           </Typography>
@@ -174,7 +178,9 @@ export default function Home() {
       {/* Work Section */}
       <Container id="work">
         <div className="flex flex-col items-center gap-4">
-          <Tag label="Work" />
+          <div className="self-center">
+            <Tag label="Work" />
+          </div>
           <Typography variant="subtitle" className="max-w-xl text-center">
             Some of the noteworthy projects I have built:
           </Typography>
@@ -192,7 +198,9 @@ export default function Home() {
       {/* Testimonials Section */}
       <Container id="testimonials" className="bg-gray-50">
         <div className="flex flex-col items-center gap-4">
-          <Tag label="Testimonials" />
+          <div className="self-center">
+            <Tag label="Testimonials" />
+          </div>
           <Typography variant="subtitle" className="max-w-xl text-center">
             Nice things people have said about me:
           </Typography>
