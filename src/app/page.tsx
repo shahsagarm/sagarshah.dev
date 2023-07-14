@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* About Me Section */}
       <Container className="bg-gray-50" id="about">
-        <div className="self-center">
+        <div className="flex justify-center">
           <Tag label="About me" />
         </div>
 
@@ -143,9 +143,9 @@ export default function Home() {
 
       {/* Skills Section */}
       <Container>
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Skills" className="self-center" />
-          <Typography variant="subtitle">
+        <div className="flex flex-col items-center gap-4">
+          <Tag label="Skills" />
+          <Typography variant="subtitle" className="max-w-xl text-center">
             The skills, tools and technologies I am really good at:
           </Typography>
         </div>
@@ -159,9 +159,9 @@ export default function Home() {
 
       {/* Experience Section */}
       <Container className="bg-gray-50">
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Experience" className="self-center" />
-          <Typography variant="subtitle">
+        <div className="flex flex-col items-center gap-4">
+          <Tag label="Experience" />
+          <Typography variant="subtitle" className="max-w-xl text-center">
             Here is a quick summary of my most recent experiences:
           </Typography>
         </div>
@@ -173,9 +173,9 @@ export default function Home() {
 
       {/* Work Section */}
       <Container id="work">
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Work" className="self-center" />
-          <Typography variant="subtitle">
+        <div className="flex flex-col items-center gap-4">
+          <Tag label="Work" />
+          <Typography variant="subtitle" className="max-w-xl text-center">
             Some of the noteworthy projects I have built:
           </Typography>
         </div>
@@ -191,9 +191,9 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <Container id="testimonials" className="bg-gray-50">
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Testimonials" className="self-center" />
-          <Typography variant="subtitle">
+        <div className="flex flex-col items-center gap-4">
+          <Tag label="Testimonials" />
+          <Typography variant="subtitle" className="max-w-xl text-center">
             Nice things people have said about me:
           </Typography>
         </div>
