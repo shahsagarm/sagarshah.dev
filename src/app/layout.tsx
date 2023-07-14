@@ -13,7 +13,6 @@ const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
 const description =
   'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
 const url = 'https://sagarshah.dev';
-const ogImageUrl = `${url}/images/open-graph-sagar.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     siteName: title,
     images: [
       {
-        url: ogImageUrl,
+        url: '/images/open-graph-sagar.png',
       },
     ],
   },
@@ -47,7 +46,12 @@ export const metadata: Metadata = {
     title,
     description,
     creator: '@shahsagarm',
-    images: ogImageUrl,
+    images: '/images/open-graph-sagar.png',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
 };
 
