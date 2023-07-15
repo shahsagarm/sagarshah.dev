@@ -41,6 +41,12 @@ import {
   TestimonialDetails,
 } from '@/lib/types';
 
+export const EXTERNAL_LINKS = {
+  GITHUB: 'https://github.com/shahsagarm',
+  TWITTER: 'https://twitter.com/shahsagarm',
+  FIGMA: 'https://www.figma.com/@shahsagarm',
+};
+
 export const NAV_LINKS = [
   {
     label: 'About',
@@ -205,7 +211,7 @@ export const PROJECTS: ProjectDetails[] = [
   {
     name: 'Wingie',
     description:
-      'A platform to compare and find cheap flights and save on flight tickets. Book and buy tickets online securely and easily. Instantly compare flights from over 300 airlines to book the best deal quickly and securely in a few simple steps.',
+      'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.',
     url: 'https://www.wingie.com',
     previewImage: ProjectWingie,
     technologies: [
@@ -244,7 +250,7 @@ export const PROJECTS: ProjectDetails[] = [
   {
     name: 'Pepehousing',
     description:
-      'A platform to rent a flat or room in Poland in an easy and secure way. Browse hundreds of verified offers, contact the owner and pay online.',
+      'A platform for renting a flat or room in Poland. You may browse hundreds of verified deals, contact the vendor, and pay online in a simple and secure manner.',
     url: 'https://pepehousing.com',
     previewImage: ProjectPepehousing,
     technologies: [

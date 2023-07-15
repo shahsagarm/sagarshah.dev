@@ -4,6 +4,8 @@ import SagarFullPose from '/public/images/sagar-full-pose.jpg';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
+import Link from '@/components/navigation/link';
+import { EXTERNAL_LINKS } from '@/lib/data';
 
 const AboutMeSection = () => {
   return (
@@ -32,11 +34,19 @@ const AboutMeSection = () => {
             Curious about me? Here you have it:
           </Typography>
           <Typography>
-            I&apos;m a passionate, self-proclaimed designer who specializes in
-            full stack development (React.js & Node.js). I am very enthusiastic
-            about bringing the technical and visual aspects of digital products
-            to life. User experience, pixel perfect design, and writing clear,
-            readable, highly performant code matters to me.
+            I&apos;m a passionate,{' '}
+            <Link
+              noCustomization
+              externalLink
+              withUnderline
+              href={EXTERNAL_LINKS.FIGMA}
+            >
+              self-proclaimed designer
+            </Link>{' '}
+            who specializes in full stack development (React.js & Node.js). I am
+            very enthusiastic about bringing the technical and visual aspects of
+            digital products to life. User experience, pixel perfect design, and
+            writing clear, readable, highly performant code matters to me.
           </Typography>
           <Typography>
             I began my journey as a web developer in 2015, and since then,
@@ -55,8 +65,26 @@ const AboutMeSection = () => {
             When I&apos;m not in full-on developer mode, you can find me
             hovering around on twitter or on indie hacker, witnessing the
             journey of early startups or enjoying some free time. You can follow
-            me on Twitter where I share tech-related bites and build in public,
-            or you can follow me on GitHub.
+            me on{' '}
+            <Link
+              noCustomization
+              externalLink
+              withUnderline
+              href={EXTERNAL_LINKS.TWITTER}
+            >
+              Twitter
+            </Link>{' '}
+            where I share tech-related bites and build in public, or you can
+            follow me on{' '}
+            <Link
+              noCustomization
+              externalLink
+              withUnderline
+              href={EXTERNAL_LINKS.GITHUB}
+            >
+              GitHub
+            </Link>
+            .
           </Typography>
           <Typography>Finally, some quick bits about me.</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
@@ -68,7 +96,7 @@ const AboutMeSection = () => {
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">Avid learner</Typography>
-              <Typography component="li">Future indie hacker</Typography>
+              <Typography component="li">Aspiring indie hacker</Typography>
             </ul>
           </div>
           <Typography>
