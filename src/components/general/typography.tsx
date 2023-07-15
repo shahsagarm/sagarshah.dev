@@ -25,7 +25,9 @@ interface TypographyProps
       React.HTMLAttributes<HTMLHeadingElement>,
       HTMLHeadingElement
     >,
-    VariantProps<typeof typographyVariants> {}
+    VariantProps<typeof typographyVariants> {
+  component?: React.ElementType;
+}
 
 let elementMapping = {
   h1: 'h1',
@@ -42,19 +44,26 @@ type ComponentElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 const Typography = React.forwardRef<
   HTMLHeadingElement | HTMLParagraphElement,
   TypographyProps
->(({ className = '', variant, children, ...props }: TypographyProps, ref) => {
-  const Comp = (variant ? elementMapping[variant] : 'p') as ComponentElement;
+>(
+  (
+    { component, className = '', variant, children, ...props }: TypographyProps,
+    ref
+  ) => {
+    const Comp = (
+      component ? component : variant ? elementMapping[variant] : 'p'
+    ) as ComponentElement;
 
-  return (
-    <Comp
-      className={mergeClasses(typographyVariants({ variant }), className)}
-      ref={ref}
-      {...props}
-    >
-      {children}
-    </Comp>
-  );
-});
+    return (
+      <Comp
+        className={mergeClasses(typographyVariants({ variant }), className)}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </Comp>
+    );
+  }
+);
 
 Typography.displayName = 'Typography';
 

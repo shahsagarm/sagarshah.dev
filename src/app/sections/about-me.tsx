@@ -61,12 +61,14 @@ const AboutMeSection = () => {
           <Typography>Finally, some quick bits about me.</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <li>B.E. in Computer Engineering</li>
-              <li>Full time freelancer</li>
+              <Typography component="li">
+                B.E. in Computer Engineering
+              </Typography>
+              <Typography component="li">Full time freelancer</Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <li>Avid learner</li>
-              <li>Future indie hacker</li>
+              <Typography component="li">Avid learner</Typography>
+              <Typography component="li">Future indie hacker</Typography>
             </ul>
           </div>
           <Typography>

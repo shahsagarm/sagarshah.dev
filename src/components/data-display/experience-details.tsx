@@ -34,7 +34,9 @@ const ExperienceDetails = ({
         </Typography>
         <ul className="flex list-disc flex-col gap-2 md:gap-1">
           {summary?.map((sentence, index) => (
-            <li key={index}>{sentence}</li>
+            <Typography component="li" key={index}>
+              {sentence}
+            </Typography>
           ))}
         </ul>
       </div>
