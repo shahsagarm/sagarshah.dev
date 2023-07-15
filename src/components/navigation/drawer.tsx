@@ -34,7 +34,7 @@ const DrawerOverlay = React.forwardRef<
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
 const drawerVariants = cva(
-  'fixed z-50 shadow-2xl bg-gray-0 ring-1 ring-black/10 transition-all ease-in-out duration-100',
+  'fixed z-50 shadow-2xl bg-gray ring-1 ring-black/10 transition-all ease-in-out duration-100',
   {
     variants: {
       side: {

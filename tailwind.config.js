@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         gray: {
-          0: 'rgb(var(--app-gray-0) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--app-gray-default) / <alpha-value>)',
           50: 'rgb(var(--app-gray-50) / <alpha-value>)',
           100: 'rgb(var(--app-gray-100) / <alpha-value>)',
           200: 'rgb(var(--app-gray-200) / <alpha-value>)',

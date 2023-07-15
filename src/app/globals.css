@@ -4,7 +4,7 @@
 
 /* Ref :: https://twitter.com/steventey/status/1677339375645126659 */
 :root {
-  --app-gray-0: 255 255 255;
+  --app-gray-default: 255 255 255;
   --app-gray-50: 249 250 251;
   --app-gray-100: 243 244 246;
   --app-gray-200: 229 231 235;
@@ -19,7 +19,7 @@
 }
 
 .dark {
-  --app-gray-0: 3 7 18;
+  --app-gray-default: 3 7 18;
   --app-gray-50: 17 24 39;
   --app-gray-100: 31 41 55;
   --app-gray-200: 55 65 81;

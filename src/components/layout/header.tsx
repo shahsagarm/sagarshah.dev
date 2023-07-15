@@ -40,8 +40,8 @@ const Header = () => {
   return (
     <header
       className={mergeClasses(
-        'sticky top-0 z-30 w-full border-b border-transparent bg-gray-0 transition-all ease-in max-md:border-gray-100',
-        scrolled ? 'bg-gray-0/50 backdrop-blur-xl md:border-gray-100' : ''
+        'sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100',
+        scrolled ? 'bg-gray/50 backdrop-blur-xl md:border-gray-100' : ''
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8">
