@@ -55,6 +55,8 @@ export const metadata: Metadata = {
   },
 };
 
+const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID;
+
 export default function RootLayout({
   children,
 }: {
@@ -62,21 +64,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-BWPBE3C0MV"
-        ></Script>
-        <Script id="google-anayltics-script">
-          {`
+      {googleAnalyticsId ? (
+        <head>
+          <Script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          ></Script>
+          <Script id="google-anayltics-script">
+            {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
-            gtag('config', 'G-BWPBE3C0MV');
+            gtag('config', '${googleAnalyticsId}');
           `}
-        </Script>
-      </head>
+          </Script>
+        </head>
+      ) : null}
       <body
         className={`${inter.className} bg-gray-0 text-gray-600 antialiased`}
       >
