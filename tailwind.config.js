@@ -51,7 +51,7 @@ module.exports = {
       animation: {
         'drawer-open': 'open 0.3s ease-in-out',
         'drawer-close': 'close 0.3s ease-in-out',
-        'waving-hand': 'waving 2s linear infinite',
+        'waving-hand': 'waving 2s linear 3',
       },
     },
   },
