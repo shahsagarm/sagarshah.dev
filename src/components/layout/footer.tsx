@@ -15,7 +15,7 @@ const Footer = () => {
             noCustomization
             externalLink
             withUnderline
-            href={EXTERNAL_LINKS.FIGMA}
+            href={EXTERNAL_LINKS.FIGMA_FILE}
           >
             Designed
           </Link>
@@ -24,7 +24,7 @@ const Footer = () => {
             noCustomization
             externalLink
             withUnderline
-            href={EXTERNAL_LINKS.GITHUB}
+            href={EXTERNAL_LINKS.GITHUB_REPO}
           >
             coded
           </Link>

@@ -43,8 +43,10 @@ import {
 
 export const EXTERNAL_LINKS = {
   GITHUB: 'https://github.com/shahsagarm',
+  GITHUB_REPO: 'https://github.com/shahsagarm/sagarshah.dev',
   TWITTER: 'https://twitter.com/shahsagarm',
   FIGMA: 'https://www.figma.com/@shahsagarm',
+  FIGMA_FILE: 'https://www.figma.com/@shahsagarm',
 };
 
 export const NAV_LINKS = [
@@ -201,9 +203,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     position: 'Full Stack Developer',
     startDate: new Date(2015, 11),
     endDate: new Date(2017, 4),
-    summary: [
-      'Worked as a full stack developer (MERN Stack / MEAN Stack / Ionic / Laravel).',
-    ],
+    summary: ['Worked as a full stack developer (React / Laravel).'],
   },
 ];
 
