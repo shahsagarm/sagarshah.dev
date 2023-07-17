@@ -20,9 +20,9 @@ import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
 
 const Logo = () => (
-  <p className="text-2xl font-bold leading-none text-gray-900 md:text-3xl">
+  <Typography variant="h3" className="font-bold">
     {'<SS />'}
-  </p>
+  </Typography>
 );
 
 const Header = () => {
