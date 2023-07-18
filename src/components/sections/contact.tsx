@@ -53,7 +53,7 @@ const ContactSection = () => {
         </Typography>
       </div>
 
-      <div className="flex flex-col items-center gap-12">
+      <div className="flex flex-col items-center gap-6 md:gap-12">
         <div className="flex flex-col items-center md:gap-4">
           <div className="flex items-center gap-4 md:gap-5">
             <Mail className="h-6 w-6 md:h-8 md:w-8" />

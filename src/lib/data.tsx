@@ -32,7 +32,7 @@ import ProjectPepehousing from '/public/images/project-pepehousing.png';
 
 import AvatarKrisztian from '/public/images/avatar-krisztian.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
-import AvatarDummy from '/public/images/avatar-dummy.png';
+import AvatarDummy from '/public/images/avatar-dummy.svg';
 
 import {
   ExperienceDetails,
