@@ -25,6 +25,10 @@ $ npm install
 $ npm run dev
 ```
 
+## Figma
+
+If you are looking for a figma file, you can find it **[here](https://www.figma.com/@shahsagarm)**.
+
 ## License
 
 Licensed under the [MIT license](https://github.com/shahsagarm/sagarshah.dev/blob/main/LICENSE).
