@@ -44,7 +44,7 @@ const AboutMeSection = () => {
               self-proclaimed designer
             </Link>{' '}
             who specializes in full stack development (React.js & Node.js). I am
-            very enthusiastic about bringing the technical and visual aspects of
+            enthusiastic about bringing the technical and visual aspects of
             digital products to life. User experience, pixel perfect design, and
             writing clear, readable, highly performant code matters to me.
           </Typography>
