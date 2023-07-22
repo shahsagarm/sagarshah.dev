@@ -82,7 +82,17 @@ const Header = () => {
               <ul className="flex list-none flex-col gap-4">
                 {NAV_LINKS.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href}>{link.label}</Link>
+                    <Link
+                      href={link.href}
+                      onClick={() => {
+                        const timeoutId = setTimeout(() => {
+                          setIsOpen(false);
+                          clearTimeout(timeoutId);
+                        }, 500);
+                      }}
+                    >
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
